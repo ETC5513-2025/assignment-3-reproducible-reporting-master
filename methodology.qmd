@@ -54,3 +54,41 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
   theme_minimal()
 
 ```
+
+## Which countrie has the highest share of renewable energy in 2023, and what kind of renewable sources does it mainly rely on?
+To understand why Norway ranks first, we conducted a deeper breakdown of its renewable energy composition. The breakdown of Norway’s energy portfolio is illustrated in Figure 2.
+
+This focused analysis on Norway not only explains its top position but also offers a benchmark for other nations aiming to increase renewable adoption through natural-resource-based strategies.
+
+**Table 2. Norway’s Renewable Electricity Generation by Source in 2023 (TWh)**
+
+```{r table-norway-2023, echo=FALSE, message=FALSE, warning=FALSE}
+
+norway_prod <- read_csv("modern-renewable-prod.filtered/modern-renewable-prod.csv")
+
+norway_2023 <- norway_prod %>%
+  filter(Entity == "Norway", Year == 2023) %>%
+  select(
+    `Electricity from wind - TWh`,
+    `Electricity from hydro - TWh`,
+    `Electricity from solar - TWh`,
+    `Other renewables including bioenergy - TWh`
+  ) %>%
+  pivot_longer(everything(), names_to = "Source", values_to = "TWh") %>%
+  mutate(Source = str_replace(Source, "Electricity from ", ""),
+         Source = str_replace(Source, " - TWh", ""))
+
+kable(norway_2023, caption = "Table 2. Norway's Renewable Electricity Generation by Source in 2023 (TWh)")
+```
+
+
+**Figure 2 below visualizes the data from Table 2.**
+
+```{r fig-norway-sources, echo=FALSE, fig.cap="Breakdown of Norway's Renewable Energy Generation in 2023"}
+ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
+  geom_bar(stat = "identity", width = 0.6) +
+  labs(x = "Source", y = "Electricity Generated (TWh)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+Figure 2 shows the modern renewable energy generation by source in Norway from 1965 to 2023. It is evident that hydropower remains the most dominant source, generating well over 130 TWh in 2023. Wind power has increased significantly since 2010, while solar and other renewables including bioenergy contribute only a minor share. This supports the finding that Norway leads globally in renewable energy share, primarily due to its abundant hydropower resources.
