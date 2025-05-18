@@ -1,0 +1,11 @@
+---
+title: "2023 Global renewable energy leader"
+format: 
+  html:
+    theme: Simplex
+  pdf: default
+author: 
+ - Arisara Therdthianwong
+ - Quanyu Qian
+ - Dhruv Kaushal Gal
+---
