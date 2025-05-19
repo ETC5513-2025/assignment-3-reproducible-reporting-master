@@ -1,0 +1,94 @@
+---
+title: "Global Renewable Energy Leaders in 2023"
+author: Master
+format:
+  html:
+    toc: true
+    toc-depth: 2
+editor: visual
+---
+
+## Top 10 Countries by Renewable Energy Share in 2023
+
+The dataset includes annual values for each country from 1965 to 2023, showing the percentage of total primary energy derived from renewable sources.
+
+The output is shown in **Table 1**, which lists the countries with the highest renewable energy share in 2023. In addition, **Figure 1** provides a horizontal bar chart to visually compare the leading countries.
+
+```{r filter-top10, message=FALSE, warning=FALSE, echo=FALSE}
+library(readr)
+library(tidyverse)
+data <- read_csv("renewable-share-energy.csv/renewable-share-energy.csv")
+
+top10_clean <- data %>%
+  filter(Year == 2023, 
+         !Entity %in% c("World", "Africa", "Asia", "Europe", "Oceania", 
+                        "North America", "South America", "Eastern Africa (EI)")) %>%
+  arrange(desc(`Renewables (% equivalent primary energy)`)) %>%
+  slice(1:10)
+
+```
+
+```{r table-top10, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+
+top10_clean %>%
+  select(Entity, Code, Year, `Renewables (% equivalent primary energy)`) %>%
+  rename(
+    Country = Entity,
+    `Renewables (%)` = `Renewables (% equivalent primary energy)`
+  ) %>%
+  kable(caption = "Table 1. Top 10 Countries by Share of Renewable Energy in 2023")
+```
+
+```{r fig-top10, fig.cap="Share of Renewable Energy in Top 10 Countries (2023)", echo=FALSE, message=FALSE, warning=FALSE}
+
+ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary energy)`), 
+                  y = `Renewables (% equivalent primary energy)`)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "Top 10 Countries by Renewable Energy Share (2023)",
+    x = "Country",
+    y = "Renewables (% of Primary Energy)"
+  ) +
+  theme_minimal()
+
+```
+
+## Which countrie has the highest share of renewable energy in 2023, and what kind of renewable sources does it mainly rely on?
+To understand why Norway ranks first, we conducted a deeper breakdown of its renewable energy composition. The breakdown of Norway’s energy portfolio is illustrated in Figure 2.
+
+This focused analysis on Norway not only explains its top position but also offers a benchmark for other nations aiming to increase renewable adoption through natural-resource-based strategies.
+
+**Table 2. Norway’s Renewable Electricity Generation by Source in 2023 (TWh)**
+
+```{r table-norway-2023, echo=FALSE, message=FALSE, warning=FALSE}
+
+norway_prod <- read_csv("modern-renewable-prod.filtered/modern-renewable-prod.csv")
+
+norway_2023 <- norway_prod %>%
+  filter(Entity == "Norway", Year == 2023) %>%
+  select(
+    `Electricity from wind - TWh`,
+    `Electricity from hydro - TWh`,
+    `Electricity from solar - TWh`,
+    `Other renewables including bioenergy - TWh`
+  ) %>%
+  pivot_longer(everything(), names_to = "Source", values_to = "TWh") %>%
+  mutate(Source = str_replace(Source, "Electricity from ", ""),
+         Source = str_replace(Source, " - TWh", ""))
+
+kable(norway_2023, caption = "Table 2. Norway's Renewable Electricity Generation by Source in 2023 (TWh)")
+```
+
+
+**Figure 2 below visualizes the data from Table 2.**
+
+```{r fig-norway-sources, echo=FALSE, fig.cap="Breakdown of Norway's Renewable Energy Generation in 2023"}
+ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
+  geom_bar(stat = "identity", width = 0.6) +
+  labs(x = "Source", y = "Electricity Generated (TWh)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+Figure 2 shows the modern renewable energy generation by source in Norway from 1965 to 2023. It is evident that hydropower remains the most dominant source, generating well over 130 TWh in 2023. Wind power has increased significantly since 2010, while solar and other renewables including bioenergy contribute only a minor share. This supports the finding that Norway leads globally in renewable energy share, primarily due to its abundant hydropower resources.
