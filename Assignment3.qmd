@@ -3,7 +3,14 @@ title: "2023 Global renewable energy leader"
 format: 
   html:
     theme: Simplex
-  pdf: default
+    toc: true
+    toc-depth: 3
+    toc-title: "Table of Contents"
+    toc-location: body
+  pdf: 
+    toc: true
+    toc-depth: 3
+    toc-title: "Table of Contents"
 author: 
  - Arisara Therdthianwong
  - Quanyu Qian
