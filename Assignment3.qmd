@@ -16,11 +16,12 @@ author:
  - Quanyu Qian
  - Dhruv Kaushal Gal
 ---
-
+\newpage
 ## Executive summary
 
 This report investigates the top 10 countries with the highest renewable energy share in 2023 and global trends in energy transitions. It further analyzes the sources of renewable energy in the leading country. The analysis is conducted using reliable data from Our World in Data. Among these countries, Norway stands out as a global leader with 72.09% of its primary energy coming from renewable sources. The findings offer valuable insight to effectively implement national approaches that could transform sustainable energy transitions worldwide.
 
+\newpage
 ## Introduction
 
 The global energy landscape has transformed rapidly in the last few decades. Many countries are undergoing a major shift toward adopting renewable sources such as hydropower, wind, and solar in response to the challenges of climate change and resource sustainability. Renewable energy now plays an important role as an alternative source that helps to reduce reliance on fossil fuels and mitigate greenhouse gas emissions.
