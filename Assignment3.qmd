@@ -20,3 +20,11 @@ author:
 ## Executive summary
 
 This report investigates the top 10 countries with the highest renewable energy share in 2023 and global trends in energy transitions. It further analyzes the sources of renewable energy in the leading country. The analysis is conducted using reliable data from Our World in Data. Among these countries, Norway stands out as a global leader with 72.09% of its primary energy coming from renewable sources. The findings offer valuable insight to effectively implement national approaches that could transform sustainable energy transitions worldwide.
+
+## Introduction
+
+The global energy landscape has transformed rapidly in the last few decades. Many countries are undergoing a major shift toward adopting renewable sources such as hydropower, wind, and solar in response to the challenges of climate change and resource sustainability. Renewable energy now plays an important role as an alternative source that helps to reduce reliance on fossil fuels and mitigate greenhouse gas emissions.
+
+Throughout the report, global renewable energy trends are identified, with a focus on the top 10 countries with highest proportion of renewable energy in total energy consumption in 2023. Norway leads the way, with roughly 72% of primary energy sourced from renewable. Sweden and Brazil are also undergoing significant transitions, with 53.9% and 50.3% renewable shares, respectively.
+
+A deeper analysis on Norway has been conducted to better understand how a developed country manages its energy infrastructure achieving a high level of renewable integration. Understanding these factors behind Norway’s performance can be beneficial for planning and improving renewable energy policies and strategies that could be adapted to different regional and national contexts. This analysis aims to provide a useful insight that can guide future energy transitions globally.
