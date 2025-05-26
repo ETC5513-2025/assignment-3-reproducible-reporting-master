@@ -200,8 +200,8 @@ We filtered the dataset to include only the year 2023. The processed
 data identifies the top 10 countries with the highest share of renewable
 energy.
 
-\textbf{Table 1} lists these countries; \textbf{Figure 1} visualizes the
-comparison using a horizontal bar chart
+\textbf{Table \textbf{?@tbl-table-top10}} lists these countries;
+\textbf{Figure \textbf{?@fig-fig-top10-bar}} visualizes the comparison.
 
 \begin{longtable}[]{@{}llrr@{}}
 \caption{Top 10 Countries by Share of Renewable Energy in
@@ -228,20 +228,18 @@ Finland & FIN & 2023 & 35.93626 \\
 South and Central America (EI) & NA & 2023 & 35.39018 \\
 \end{longtable}
 
-```\{r filter-top10, echo=FALSE, message=FALSE, warning=FALSE,
-fig.cap=``Figure 1: Top 10 Countries by Share of Renewable Energy in
-2023'', fig.align=`center', fig.show=`hold', dev=`png'\} library(readr)
-library(tidyverse)
+\begin{figure}
 
-data \textless-
-read\_csv(``renewable-share-energy.filtered/renewable-share-energy.csv'')
+\caption{\label{fig-top10-bar}Share of Renewable Energy in Top 10
+Countries (2023)}
 
-ggplot(top10\_clean, aes(x = reorder(Entity,
-\texttt{Renewables\ (\%\ equivalent\ primary\ energy)}), y =
-\texttt{Renewables\ (\%\ equivalent\ primary\ energy)})) +
-geom\_col(fill = ``steelblue'') + coord\_flip() + labs( title = ``Top 10
-Countries by Renewable Energy Share (2023)'', x = ``Country'', y =
-``Renewables (\% of Primary Energy)'' ) + theme\_minimal() ```
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{Assignment3_files/figure-pdf/fig-top10-bar-1.pdf}}
+
+}
+
+\end{figure}%
 
 \subsection{Which country leads in renewable energy share in
 2023?}\label{which-country-leads-in-renewable-energy-share-in-2023}
@@ -286,17 +284,13 @@ Energy Generation in 2023}
 
 \end{figure}%
 
-As shown in Table 2 and Figure 2, Norway's renewable electricity
-generation in 2023 is overwhelmingly dominated by hydropower, which
-accounts for approximately 136 TWh, making up more than 90\% of its
-total renewable output. In comparison, wind energy contributed around 15
-TWh, which is only about 10\% of the total. Both solar energy and other
-renewables including bioenergy made negligible contributions, with
-values of 0.17 TWh and 0.26 TWh, respectively.
-
-This distribution highlights Norway's strong reliance on its abundant
-hydrological resources, which are enabled by its mountainous terrain and
-extensive water systems.
+As shown in Figure~\ref{fig-norway-sources}, Norway's renewable
+electricity in 2023 is dominated by hydropower, which accounts for
+approximately 136 TWh, making up more than 90\% of its total renewable
+output. In comparison, wind energy contributed around 15 TWh, which is
+only about 10\% of the total. Both solar energy and other renewables
+including bioenergy made negligible contributions, with values of 0.17
+TWh and 0.26 TWh, respectively.
 
 The limited output from wind and solar indicates that while Norway has
 made some effort to diversify, its renewable success is not based on
@@ -312,10 +306,7 @@ share?}\label{why-norway-ranks-highest-globally-in-renewable-energy-share}
 
 To further explain why Norway ranks highest globally in renewable energy
 share, we compare its energy source composition with that of other
-top-performing countries. Figure 3 below compares total hydropower
-generation in 2023 across selected countries. While China leads in
-absolute hydropower output, Norway still ranks among the global top
-producers despite its relatively small population and geographic size.
+top-performing countries.
 
 \begin{figure}
 
@@ -330,15 +321,15 @@ producers despite its relatively small population and geographic size.
 
 \end{figure}%
 
-Figure 3 compares total hydropower generation in 2023 across
-top-producing countries. While China leads with over 1,200 TWh, Norway
-still ranks among the global top producers with approximately 270 TWh
---- despite its relatively small population and geographic size. This
-reinforces the idea that Norway's dominance in renewable energy share is
-not just a percentage artifact, but supported by substantial hydropower
-infrastructure and generation capacity. Norway's natural topography has
-enabled it to produce a significant amount of clean energy with low
-variability.
+As shown in Figure~\ref{fig-global-hydro} compares total hydropower
+generation in 2023 across selected countries. While China leads with
+over 1,200 TWh, Norway still ranks among the global top producers with
+approximately 270 TWh --- despite its relatively small population and
+geographic size. This reinforces the idea that Norway's dominance in
+renewable energy share is not just a percentage artifact, but supported
+by substantial hydropower infrastructure and generation capacity.
+Norway's natural topography has enabled it to produce a significant
+amount of clean energy with low variability.
 
 
 
