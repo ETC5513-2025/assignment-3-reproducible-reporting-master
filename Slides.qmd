@@ -1,0 +1,35 @@
+---
+title: "2023 Global renewable energy leader"
+author: "<br>Arisara Therdthianwong<br>Quanyu Qian<br>Dhruv Kaushal Gal"
+format:
+  revealjs:
+    theme: solarized
+    incremental: true
+---
+
+# Problem Introduction
+
+:::: {.columns}
+
+::: {.column width="55%"}
+![GHG Emissions by Sector](images/all-gas.png){#fig-ghg width="100%"}
+:::
+
+::: {.column width="45%"}
+- Energy is the largest contributor to climate change  
+- **Electricity and heat:** 29.7%  
+- **Transportation:** 13.7%  
+- **Manufacturing and construction:** 12.7%  
+- **Buildings:** 6.6%  
+:::
+
+::::
+
+# Our finding
+
+-   Climate change and sustainability challenges
+-   Shift in energy landscape
+    -   Hydropower
+    -   Wind
+    -   Solar
+-   This report uses reliable data from [Our World in Data](https://ourworldindata.org/renewable-energy) to identify the **top 10 countries** by renewable energy share in 2023
