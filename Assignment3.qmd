@@ -190,3 +190,13 @@ ggplot(hydro_2023, aes(x = reorder(Entity, `Electricity from hydro - TWh`),
 @fig-global-hydro compares total hydropower generation in 2023 across selected countries. While China leads with over 1,200 TWh, Norway still ranks among the global top producers with approximately 270 TWh — despite its relatively small population and geographic size. This reinforces the idea that Norway’s dominance in renewable energy share is not just a percentage artifact, but supported by substantial hydropower infrastructure and generation capacity. Norway’s natural topography has enabled it to produce a significant amount of clean energy with low variability.
 
 
+# Results
+
+The analysis identified the top 10 countries by share of renewable energy in 2023. As shown in **Table 1**, Norway led with 72.09% of its primary energy derived from renewable sources, followed by Sweden (53.9%) and Brazil (50.3%). The results reflect strong national commitments toward clean energy transitions, particularly among countries with robust hydroelectric infrastructure.
+
+**Figure 1** visualizes these rankings and highlights a significant gap between Norway and the rest of the top 10, reinforcing its global leadership in renewable integration.
+
+To explore Norway’s performance, we analyzed its electricity generation by source in 2023. **Table 2** and **Figure 2** reveal that hydropower dominated with over 120 TWh generated, followed by wind energy and minor contributions from solar and bioenergy. This confirms that Norway’s high renewable share is largely driven by its well-developed hydroelectric infrastructure.
+
+These findings offer strong evidence that policy support, geographic potential, and long-term investment are key drivers of renewable adoption at scale.
+
