@@ -259,3 +259,20 @@ In conclusion, Norway's case exemplifies how geographic advantages, when matched
 Our World in Data. (2024). Renewable energy data explorer. Retrieved from [https://ourworldindata.org/renewable-energy](https://ourworldindata.org/renewable-energy)
 
 Our World in Data. (2024). Hydropower generation by country. Retrieved from [https://ourworldindata.org/grapher/hydropower-consumption](https://ourworldindata.org/grapher/hydropower-consumption)
+
+
+## Citations 
+
+Library readr - Wickham H, Hester J, Bryan J (2024). _readr: Read Rectangular Text Data_. R package version 2.1.5,
+  https://github.com/tidyverse/readr, <https://readr.tidyverse.org>.
+  
+  
+Library Tidyverse -  Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn
+  M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D,
+  Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43),
+  1686. doi:10.21105/joss.01686 <https://doi.org/10.21105/joss.01686>.
+  
+  
+Library Knitr - Xie Y (2025). _knitr: A General-Purpose Package for Dynamic Report Generation in R_. R package version 1.50,
+  <https://yihui.org/knitr/>.
+
