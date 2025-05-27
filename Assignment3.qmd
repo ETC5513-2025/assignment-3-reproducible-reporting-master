@@ -254,3 +254,8 @@ In conclusion, Norway's case exemplifies how geographic advantages, when matched
 - *Support adaptive policy*: Prepare for climate risks by developing redundancy and storage solutions.
 
 
+## References
+
+Our World in Data. (2024). Renewable energy data explorer. Retrieved from [https://ourworldindata.org/renewable-energy](https://ourworldindata.org/renewable-energy)
+
+Our World in Data. (2024). Hydropower generation by country. Retrieved from [https://ourworldindata.org/grapher/hydropower-consumption](https://ourworldindata.org/grapher/hydropower-consumption)
