@@ -47,10 +47,6 @@ To complement Norway’s national breakdown, we further compared its hydropower 
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
-We filtered the dataset to include only the year 2023. The processed data identifies the top 10 countries with the highest share of renewable energy.
-
-
-@tbl-table-top10 lists these countries; @fig-top10-bar visualizes the comparison.
 
 
 ```{r filter-top10, message=FALSE, warning=FALSE, echo=FALSE}
@@ -101,14 +97,11 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
 
 ```
 
+@fig-top10-bar illustrates the top 10 countries with the highest proportion of renewable energy in their primary energy mix in 2023. Norway ranks first, with over 70% of its primary energy sourced from renewables. Sweden and Brazil follow, each exceeding 50%, while countries like Denmark, New Zealand, and Austria also demonstrate strong renewable adoption above 40%. 
 
-## Which country leads in renewable energy share in 2023?
+## Norway: Global Leader in 2023
 
-Norway ranked first in 2023 by renewable energy share.
-
-
-To explore why Norway ranked first, we filtered its national records to analyze its renewable energy sources. 
-
+In 2023, Norway ranked first globally for its share of renewable energy. This highlights its long-standing commitment to sustainable energy policies and investment in hydropower.
 
 ```{r tbl-table-norway-2023, echo=FALSE, message=FALSE, warning=FALSE}
 norway_prod <- read_csv("modern-renewable-prod.csv")
@@ -145,14 +138,12 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
 
 As shown in @fig-norway-sources, Norway’s renewable electricity in 2023 is dominated by hydropower, which accounts for approximately 136 TWh, making up more than 90% of its total renewable output. In comparison, wind energy contributed around 15 TWh, which is only about 10% of the total. Both solar energy and other renewables including bioenergy made negligible contributions, with values of 0.17 TWh and 0.26 TWh, respectively.
 
-The limited output from wind and solar indicates that while Norway has made some effort to diversify, its renewable success is not based on technological breadth, but rather on natural geographic advantages.
+This energy composition highlights that Norway’s leading renewable share is not due to technological diversity but rather its natural geographic advantages, particularly abundant hydrological resources.
 
-This clear energy profile lays the foundation for further analysis in the Results section, where we explore the historical, policy, and environmental factors that have enabled Norway’s exceptional performance in renewable integration.
-
-## Why Norway ranks highest globally in renewable energy share?
+## Explaining Norway's Top Position
 
 
-To further explain why Norway ranks highest globally in renewable energy share, we compare its energy source composition with that of other top-performing countries. 
+To understand this, we analyzed Norway’s national energy composition and compared it with other top-performing countries to explore why it leads globally in renewable energy share.
 
 
 ```{r}
@@ -191,7 +182,7 @@ ggplot(hydro_2023, aes(x = reorder(Entity, `Electricity from hydro - TWh`),
 
 
 
-## Results
+# Results
 
 
 The analysis revealed that in 2023, Norway led globally in renewable energy adoption, with 72.09% of its primary energy coming from renewable sources, as shown in @tbl-table-top10. Sweden (53.9%) and Brazil (50.3%) followed closely, highlighting strong national commitments to clean energy transitions.
@@ -236,7 +227,7 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 ```
 
 
-## Discussion and Conclusion
+# Discussion and Conclusion
 
 Norway’s top ranking in renewable energy share is not incidental—it reflects decades of strategic investment in hydroelectric infrastructure, supported by favorable geography and a stable policy environment. The country’s energy profile, dominated by hydropower, illustrates how natural endowments can be effectively leveraged to transition away from fossil fuels.
 
