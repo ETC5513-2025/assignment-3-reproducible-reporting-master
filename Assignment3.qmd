@@ -236,4 +236,14 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 ```
 
 
+## Discussion and Conclusion
+
+Norway’s top ranking in renewable energy share is not incidental—it reflects decades of strategic investment in hydroelectric infrastructure, supported by favorable geography and a stable policy environment. The country’s energy profile, dominated by hydropower, illustrates how natural endowments can be effectively leveraged to transition away from fossil fuels.
+
+However, this reliance on a single dominant source introduces potential vulnerabilities. Climate variability, such as droughts or shifting precipitation patterns, could significantly impact hydroelectric generation. Furthermore, despite its leadership, Norway’s use of wind, solar, and bioenergy remains minimal, indicating untapped potential for diversification.
+
+The global comparison in hydropower generation reinforces Norway’s substantial absolute output relative to its size. This combination of high renewable share and high volume is rare among countries and highlights the effectiveness of long-term, resource-aligned energy planning.
+
+In conclusion, Norway's case exemplifies how geographic advantages, when matched with consistent national policy and infrastructure investment, can result in world-leading performance in renewable energy integration.
+
 
