@@ -75,10 +75,9 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
 
 ## Norway's Renewable Energy Composition (2023)
 
-  
 ::: {.columns}
-::: {.column width="50%"}
 
+::: {.column width="35%"}
 - Hydropower: **91.2%**  
 - Wind: 6.2%  
 - Bioenergy: 2.1%  
@@ -86,47 +85,49 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
 - Shows Norway's natural advantage  
 - Basis of its global renewable leadership
 
+Together, this unique energy mix positions Norway as a global leader in clean electricity generation.
 :::
 
-::: {.column width="50%"}
+::: {.column width="65%"}
 
 ```{r fig-norway-pie, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-
 df <- data.frame(
   source = c("Hydropower", "Wind", "Bioenergy", "Solar"),
   share = c(91.2, 6.2, 2.1, 0.5)
 )
 
-df$label <- paste0(df$source, " (", df$share, "%)")
+df$source_label <- paste0(df$source, " (", df$share, "%)")
 
-ggplot(df, aes(x = "", y = share, fill = label)) +
+ggplot(df, aes(x = "", y = share, fill = source_label)) +
   geom_col(width = 1) +
-  coord_polar("y") +
+  coord_polar(theta = "y") +
   theme_void() +
-  labs(title = "Norway's Renewable Energy Composition (2023)")
+  labs(title = "Norway’s Renewable Energy Composition (2023)") +
+  theme(
+    plot.title = element_text(size = 20, face = "bold", hjust = 0.5),
+    legend.title = element_blank(), 
+    legend.text = element_text(size = 14)  
+  )
 ```
 
+:::
 
-Together, this unique energy mix positions Norway as a global leader in clean electricity generation.
-
+:::
 
 ## Small Country, Big Power: Norway vs. Global Top
 
+### Norway’s hydropower output rivals global giants despite its small size
 
 ::: {.columns}
 
 ::: {.column width="45%"}
-
-- Norway ranks high not just in renewable **share** but also in **absolute hydropower output**
-- Over **270 TWh** hydro generation in 2023 despite small population
-- Unique **topography** enables consistent and large-scale hydropower
-- Global comparison confirms that Norway outperforms even larger nations in clean energy output
-
-
+-	Norway: 270 TWh 
+-	United States: 239 TWh 
+-	India: 149 TWh 
+-	China: 1226 TWh 
 :::
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 
 ```{r fig-global-hydro-pie, echo=FALSE, message=FALSE, warning=FALSE}
 library(readr)
@@ -139,18 +140,28 @@ hydro_2023 <- hydro_data %>%
   filter(Year == 2023) %>%
   select(Entity, `Electricity from hydro - TWh`) %>%
   rename(Country = Entity, Hydro_TWh = `Electricity from hydro - TWh`) %>%
-  arrange(desc(Hydro_TWh))
+  arrange(desc(Hydro_TWh)) %>%
+  slice(1:4) %>%
+  bind_rows(hydro_data %>% filter(Year == 2023, Entity == "Norway") %>%
+              select(Entity, `Electricity from hydro - TWh`) %>%
+              rename(Country = Entity, Hydro_TWh = `Electricity from hydro - TWh`))
 
-top5_plus_norway <- hydro_2023 %>%
-  filter(Country %in% c(head(hydro_2023$Country, 5), "Norway")) %>%
-  distinct()
+hydro_2023 <- hydro_2023 %>%
+  mutate(label = paste0(Country, " (", round(Hydro_TWh, 2), " TWh)"))
 
-top5_plus_norway$Label <- paste0(top5_plus_norway$Country, " (", top5_plus_norway$Hydro_TWh, " TWh)")
-
-ggplot(top5_plus_norway, aes(x = "", y = Hydro_TWh, fill = Label)) +
+ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
   geom_col(width = 1) +
-  coord_polar("y") +
+  coord_polar(theta = "y") +
   theme_void() +
-  labs(title = "Hydropower Generation by Country (2023)")
+  labs(title = "Hydropower Generation by Country (2023)") +
+  theme(
+    plot.title = element_text(size = 20, face = "bold", hjust = 0.5),
+    legend.title = element_blank(),
+    legend.text = element_text(size = 14),
+    legend.key.size = unit(1, "cm")
+  )
 ```
 
+:::
+
+:::
