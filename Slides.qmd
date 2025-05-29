@@ -162,6 +162,100 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
   )
 ```
 
+
 :::
 
 :::
+
+
+
+## Results Summary
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{r fig-top10-bar-results, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Top 10 countries by renewable energy share in 2023"}
+# Top 10 bar chart code already defined in your file, so reuse it here.
+```
+
+:::
+
+::: {.column width="45%"}
+- **Norway** leads globally with **72.09%** renewable share  
+- Sweden (53.9%) and Brazil (50.3%) follow  
+- Reflects long-term national energy policies  
+- Natural hydroelectric capacity is a key driver  
+:::
+
+::::
+
+
+
+## Norway’s Renewable Share Over Time
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{r fig-norway-trend, echo=FALSE, message=FALSE, warning=FALSE}
+# Norway trend line chart code (already present in your .qmd)
+```
+
+:::
+
+::: {.column width="45%"}
+- Norway has maintained a **>60%** renewable share since **2000**  
+- Consistent leadership due to:  
+  - Strong infrastructure  
+  - Supportive policy  
+  - Hydrological advantage  
+:::
+
+::::
+
+
+## Discussion
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Hydropower dominance offers reliability  
+- But it also introduces **climate risk**  
+  - Droughts or reduced rainfall can affect generation  
+- Other sources (wind, solar, bioenergy) are **underutilized**  
+:::
+
+::: {.column width="50%"}
+
+```{r fig-norway-sources, echo=FALSE, message=FALSE, warning=FALSE}
+# You already have this pie/bar chart in your code
+```
+
+:::
+
+::::
+
+
+## Policy Recommendations
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- **Diversify** beyond hydropower  
+  - Boost solar and wind investments  
+- **Modernize the grid** to handle variability  
+- **Export expertise** in renewable policy  
+- **Plan for climate uncertainty** with redundancy and storage  
+:::
+
+::: {.column width="40%"}
+![Policy Icon](images/policy.png){width="80%"}  
+:::
+
+::::
+
+
+
+

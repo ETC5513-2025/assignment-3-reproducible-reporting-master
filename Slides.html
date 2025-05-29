@@ -269,8 +269,99 @@ Figure&nbsp;4
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </div></div>
 
+=======
+<section id="results-summary" class="slide level2">
+<h2>Results Summary</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li class="fragment"><strong>Norway</strong> leads globally with <strong>72.09%</strong> renewable share<br>
+</li>
+<li class="fragment">Sweden (53.9%) and Brazil (50.3%) follow<br>
+</li>
+<li class="fragment">Reflects long-term national energy policies<br>
+</li>
+<li class="fragment">Natural hydroelectric capacity is a key driver<br>
+</li>
+</ul>
+</div></div>
+</section>
+<section id="norways-renewable-share-over-time" class="slide level2">
+<h2>Norway’s Renewable Share Over Time</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li class="fragment">Norway has maintained a <strong>&gt;60%</strong> renewable share since <strong>2000</strong><br>
+</li>
+<li class="fragment">Consistent leadership due to:
+<ul>
+<li class="fragment">Strong infrastructure<br>
+</li>
+<li class="fragment">Supportive policy<br>
+</li>
+<li class="fragment">Hydrological advantage<br>
+</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Hydropower dominance offers reliability<br>
+</li>
+<li class="fragment">But it also introduces <strong>climate risk</strong>
+<ul>
+<li class="fragment">Droughts or reduced rainfall can affect generation<br>
+</li>
+</ul></li>
+<li class="fragment">Other sources (wind, solar, bioenergy) are <strong>underutilized</strong><br>
+</li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="policy-recommendations" class="slide level2">
+<h2>Policy Recommendations</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li class="fragment"><strong>Diversify</strong> beyond hydropower
+<ul>
+<li class="fragment">Boost solar and wind investments<br>
+</li>
+</ul></li>
+<li class="fragment"><strong>Modernize the grid</strong> to handle variability<br>
+</li>
+<li class="fragment"><strong>Export expertise</strong> in renewable policy<br>
+</li>
+<li class="fragment"><strong>Plan for climate uncertainty</strong> with redundancy and storage<br>
+</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/policy.png" style="width:80.0%"></p>
+<figcaption>Policy Icon</figcaption>
+</figure>
+</div>
+</div></div>
+
+</section>
+</div></div>
+</section>
+</div></div>
+>>>>>>> 846e5bd (Changed for Dhruv's presentation)
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -488,80 +579,42 @@ Figure&nbsp;4
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
