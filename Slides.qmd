@@ -162,6 +162,9 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
   )
 ```
 
+:::
+
+:::
 
 :::
 
@@ -176,7 +179,15 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 ::: {.column width="55%"}
 
 ```{r fig-top10-bar-results, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Top 10 countries by renewable energy share in 2023"}
-# Top 10 bar chart code already defined in your file, so reuse it here.
+# Reuse previously created 'top10_clean'
+
+ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary energy)`), 
+                        y = `Renewables (% equivalent primary energy)`, fill = Entity)) +
+  geom_col() +
+  coord_flip() +
+  labs(x = NULL, y = "Renewable Share (%)") +
+  theme_minimal() +
+  theme(legend.position = "none")
 ```
 
 :::
@@ -190,16 +201,23 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 
 ::::
 
-
-
 ## Norway’s Renewable Share Over Time
 
 :::: {.columns}
 
 ::: {.column width="55%"}
 
-```{r fig-norway-trend, echo=FALSE, message=FALSE, warning=FALSE}
-# Norway trend line chart code (already present in your .qmd)
+```{r fig-norway-trend-slide, echo=FALSE, message=FALSE, warning=FALSE}
+norway_trend <- data %>%
+  filter(Entity == "Norway", Year >= 2000) %>%
+  select(Year, `Renewables (% equivalent primary energy)`)
+
+ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)`)) +
+  geom_line(color = "darkgreen", size = 1.2) +
+  geom_point(color = "darkgreen") +
+  labs(title = "Norway's Renewable Energy Share Over Time",
+       x = "Year", y = "Renewables (% of Primary Energy)") +
+  theme_minimal()
 ```
 
 :::
@@ -214,7 +232,6 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 
 ::::
 
-
 ## Discussion
 
 :::: {.columns}
@@ -228,14 +245,43 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 
 ::: {.column width="50%"}
 
-```{r fig-norway-sources, echo=FALSE, message=FALSE, warning=FALSE}
-# You already have this pie/bar chart in your code
+```{r fig-norway-sources-slide, echo=FALSE, warning=FALSE, message=FALSE}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(stringr)
+
+norway_prod <- read_csv("modern-renewable-prod.csv")
+
+norway_2023 <- norway_prod %>%
+  filter(Entity == "Norway", Year == 2023) %>%
+  select(
+    `Electricity from wind - TWh`,
+    `Electricity from hydro - TWh`,
+    `Electricity from solar - TWh`,
+    `Other renewables including bioenergy - TWh`
+  ) %>%
+  pivot_longer(everything(), names_to = "Source", values_to = "TWh") %>%
+  mutate(Source = str_replace(Source, "Electricity from ", ""),
+         Source = str_replace(Source, " - TWh", ""))
+
+ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
+  geom_bar(stat = "identity", width = 0.6) +
+  geom_text(aes(label = round(TWh, 1)), vjust = -0.3) +
+  labs(
+    title = "Norway's Renewable Energy Mix (2023)",
+    x = "Source",
+    y = "Electricity Generated (TWh)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
 ```
 
 :::
 
 ::::
-
 
 ## Policy Recommendations
 
