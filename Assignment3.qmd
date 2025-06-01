@@ -34,11 +34,9 @@ A deeper analysis on Norway has been conducted to better understand how a develo
 \newpage
 # Methodology
 
-Building on the global patterns identified above, we used 2023 data from Our World in Data to examine national-level energy composition. Aggregated regions were excluded to identify the top 10 countries by renewable energy share.
+This report adopts a data-driven comparative analysis approach. The  primary dataset is sourced from Our World in Data. The dataset includes global and country-level energy data, which was filtered to exclude aggregated regions identifying the top 10 countries by renewable energy share in 2023.
 
-We focused on Norway—the global leader—to explore the drivers behind its performance. This included analyzing Norway’s internal energy mix, comparing it with other major economies, and evaluating absolute hydropower output across countries.
-
-This multi-layered analysis provides both a proportional and quantitative basis for assessing Norway's global leadership in renewable energy.
+Among the countries identified, Norway was selected for further analysis due to its top ranking. A focused case study was conducted to examine its internal energy composition and assess the scale of its renewable output.
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
