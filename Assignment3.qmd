@@ -1,21 +1,20 @@
 ---
-title: "Global Renewable Energy Leaders in 2023"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-  pdf:
-    pdf-engine: pdflatex
-    keep-tex: true
-    fig-cap-location: top
-    dev: png
-    toc: true
-    toc-depth: 3
-    toc-title: "Table of Contents"
+title: "Global Renewable Energy Leaders"
 author: 
  - Arisara Therdthianwong
  - Quanyu Qian
  - Dhruv Kaushal Gal
+bibliography: references.bib
+blind: false
+cover: true
+linestretch: 1.5
+format: 
+  wp-pdf:
+    toc: true
+    number-sections: true
+    keep-text: true
+filters:
+  - blindable-div
 ---
 
 ## Executive summary
