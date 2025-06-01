@@ -40,8 +40,6 @@ Among the countries identified, Norway was selected for further analysis due to 
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
-
-
 ```{r filter-top10, message=FALSE, warning=FALSE, echo=FALSE}
 library(readr)
 library(tidyverse)
@@ -54,7 +52,6 @@ top10_clean <- data %>%
                         "North America", "South America", "Eastern Africa (EI)")) %>%
   arrange(desc(`Renewables (% equivalent primary energy)`)) %>%
   slice(1:10)
-
 
 ```
 
@@ -89,11 +86,10 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
   theme_minimal()
 
 ```
+\newpage
 
-@tbl-table-top10 and @fig-top10-bar show the top 10 countries with the highest renewable energy shares.  
-Norway leads with over 70%, far ahead of others. 
-
-Its standout performance led us to investigate its domestic energy sources.
+[@tbl-table-top10](#tbl-table-top10) and [@fig-top10-bar](#fig-top10-bar) present the top 10 countries with the highest renewable energy shares in 2023. 
+Norway ranks first with renewable share exceeding 72%, significantly ahead of other countries. This exceptional performance drives deeper examination of Norway's domestic energy composition.
 
 ## Norway: Global Leader in 2023
 
