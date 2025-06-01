@@ -41,7 +41,7 @@ Specifically, the report explores two key questions on why Norway leads in renew
 
 The primary dataset, obtained from Our World in Data, includes global and country-level renewable energy statistics. We filtered out aggregate regions, enabling the identification of the top 10 countries by renewable energy share in 2023.
 
-Norway, ranking first, was selected for focused analysis. The analysis investigates Norway's domestic electricity mix and compares hydropower output with other major economies. To reveal the structural and strategic factors underpinning its performance.
+Norway, ranking first, was selected for focused analysis. The analysis investigates Norway’s domestic electricity mix and compares hydropower output with other major economies to reveal the structural and strategic factors underpinning its performance.
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
