@@ -19,24 +19,29 @@ filters:
 \newpage
 # Executive summary
 
-This report investigates the top 10 countries with the highest renewable energy share in 2023 and global trends in energy transitions. It further analyzes the sources of renewable energy in the leading country. The analysis is conducted using reliable data from Our World in Data. Among these countries, Norway stands out as a global leader with 72.09% of its primary energy coming from renewable sources. The findings offer valuable insight to effectively implement national approaches that could transform sustainable energy transitions worldwide.
+This report investigates global trends in renewable energy transitions by analyzing the top 10 countries in 2023 and examining the energy sources in the leading country. 
+The analysis uses reliable data from Our World in Data. 
+Among these countries, Norway stands out as a global leader with 72.09% of its primary energy sourced from renewables.
+These findings offer valuable insights for shaping national strategies toward sustainable energy transitions.
 
 \newpage
 # Introduction
 
-The global energy landscape has transformed rapidly in the last few decades. Many countries are undergoing a major shift toward adopting renewable sources such as hydropower, wind, and solar in response to the challenges of climate change and resource sustainability. Renewable energy now plays an important role as an alternative source that helps to reduce reliance on fossil fuels and mitigate greenhouse gas emissions.
+The global energy landscape has transformed rapidly in the last few decades. Many countries are transitioning toward renewable sources—such as hydropower, wind, and solar—in response to climate change and resource sustainability challenges. Renewables now serve as a critical alternative to fossil fuels, helping to reduce dependence and mitigate greenhouse gas emissions.
 
-Throughout the report, global renewable energy trends are identified, with a focus on the top 10 countries with highest proportion of renewable energy in total energy consumption in 2023. Norway leads the way, with roughly 72% of primary energy sourced from renewable. Sweden and Brazil are also undergoing significant transitions, with 53.9% and 50.3% renewable shares, respectively.
+Throughout the report, global renewable energy trends are identified, with a focus on the top 10 countries with the highest proportion of renewable energy in total energy consumption in 2023. Norway leads the way, with roughly 72% of its primary energy sourced from renewable. Sweden and Brazil are also undergoing significant transitions, with 53.9% and 50.3% renewable shares, respectively.
 
-A deeper analysis on Norway has been conducted to better understand how a developed country manages its energy infrastructure achieving a high level of renewable integration. Understanding these factors behind Norway’s performance can be beneficial for planning and improving renewable energy policies and strategies that could be adapted to different regional and national contexts. This analysis aims to provide a useful insight that can guide future energy transitions globally.
+A deeper analysis of Norway is conducted to understand how a developed country achieves high renewable integration through energy infrastructure management. Understanding these factors behind Norway’s performance can be beneficial for planning and improving renewable energy policies and strategies that could be adapted to different regional and national contexts. This analysis aims to provide a useful insight that can guide future energy transitions globally.
+
+This report seeks to answer: why does Norway lead in renewable energy share, and whether its dominance reflects real capacity or just proportional advantage.
 
 
 \newpage
 # Methodology
 
-This report adopts a data-driven comparative analysis approach. The  primary dataset is sourced from Our World in Data. The dataset includes global and country-level energy data, which was filtered to exclude aggregated regions identifying the top 10 countries by renewable energy share in 2023.
+Building on the global overview presented in the introduction, this section details the data sources and methodological framework employed to investigate Norway’s leading position in renewable energy share. The primary dataset, obtained from Our World in Data, was filtered to exclude aggregated regions, enabling the identification of the top 10 countries by renewable energy share in 2023.
 
-Among the countries identified, Norway was selected for further analysis due to its top ranking. A focused case study was conducted to examine its internal energy composition and assess the scale of its renewable output.
+Norway, ranking first, was selected for focused analysis. By comparing its internal energy composition and hydropower output with other major economies, this study aims to reveal the structural and strategic factors underpinning its performance.
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
@@ -130,14 +135,15 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
 ```
 
 
-As shown in [@fig-norway-sources](#fig-norway-sources), hydropower accounted for approximately 136 TWh, contributing over 90% of the country's renewable electricity generation. Wind energy produced 15 TWh, while Solar and bioenergy made only marginal contributions. 
+[@fig-norway-sources](#fig-norway-sources) shows that hydropower contributed over 90% of Norway’s renewable electricity in 2023 (136 TWh), while wind (15 TWh), solar, and bioenergy made minor contributions.
 
 These figures highlight that Norway’s renewable energy leadership is largely driven by its heavy reliance on **hydropower**, rather than a diversified renewable portfolio.
 
 
 ## Global Hydropower Generation by Country (2023)
+While Norway's renewable share is impressive, percentage alone may not reflect actual capacity. A high share could result from low total energy demand.
 
-Eventhough we can clearly see Norway performance in renewable energy share, percentage alone does not reflect actual capacity. A high share could result from low total energy demand. Therefore, we compared its absolute hydropower output with that of other major economies to determine whether its position is based on scale, not proportion.
+Therefore, we compared its absolute hydropower output with that of other major economies to determine whether its position is based on scale, not proportion.
 
 ```{r}
 #| label: fig-global-hydro
@@ -171,20 +177,22 @@ ggplot(hydro_2023, aes(x = reorder(Entity, `Electricity from hydro - TWh`),
   theme_minimal()
 ```
 
-[@fig-global-hydro](#fig-global-hydro) illustrates Norway's hydropower generation in 2023 compared to other major producers. Despite its relatively small population and geographic size, Norway position itself among top global hydropower generators. This reinforces Norway's leadership in renewable energy. Not solely based on high proportional share but supported by substantial infrastructure and high absolute generation capacity.
+Despite its small size, Norway produced 270 TWh, exceeding the U.S. (239 TWh) and India (149 TWh) [@fig-global-hydro](#fig-global-hydro). This comparison confirms that Norway’s renewable leadership is not only proportional, but also supported by significant absolute generation and robust infrastructure.
+
+
 
 \newpage
 # Results
 
-The analysis revealed that in 2023, Norway led globally in renewable energy adoption, with 72.09% of its primary energy coming from renewable sources, as shown in [@tbl-table-top10](#tbl-table-top10). Sweden (53.9%) and Brazil (50.3%) followed closely, highlighting strong national commitments to clean energy transitions.
+Based on the methodology outlined above, this section presents key findings from our data analysis. In 2023, Norway led globally in renewable energy adoption, with 72.09% of its primary energy from renewable sources, followed by Sweden (53.9%) and Brazil (50.3%) [@tbl-table-top10](#tbl-table-top10). These figures highlight strong national commitments to clean energy.
 
-[@fig-top10-bar](#fig-top10-bar) visualizes these rankings, with Norway’s share standing distinctly above the rest of the top 10. This outperformance reflects long-term national investments and natural hydroelectric potential.
+[@fig-top10-bar](#fig-top10-bar) visualizes the top 10 countries, with Norway’s share standing clearly above others. This exceptional performance reflects sustained investment and abundant hydropower resources.
 
-To understand this further, [@tbl-table-norway-2023](#tbl-table-norway-2023) and [@fig-norway-sources](#fig-norway-sources) show that Norway’s 2023 electricity mix was over 90% hydropower, supported by modest wind output and minimal solar and bioenergy contributions.
+To explore the drivers of this leadership, [@tbl-table-norway-2023](#tbl-table-norway-2023) and [@fig-norway-sources](#fig-norway-sources) show that over 90% of Norway’s electricity in 2023 came from hydropower, with limited contributions from wind, solar, and bioenergy.
 
-Crucially, [@fig-norway-trend](#fig-norway-trend) illustrates that Norway’s leadership is not new—it has maintained a renewable share above 60% for over two decades. This trend reinforces the country’s sustained commitment to renewable development through stable policy, investment, and infrastructure planning.
+[@fig-norway-trend](#fig-norway-trend) further illustrates that Norway has maintained a renewable share above 60% for two decades, signaling consistent national strategy and infrastructure planning.
 
-Overall, these results demonstrate that top-performing countries combine favorable geography with long-term national strategies. Norway exemplifies how consistent planning and natural resource optimization can produce a globally leading clean energy profile.
+Overall, these findings suggest that Norway’s leadership is not merely proportional but supported by robust capacity. The case exemplifies how favorable geography, long-term policy, and investment alignment can enable sustained renewable integration at scale.
 
 
 ```{r}
@@ -220,13 +228,15 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 
 # Discussion and Conclusion
 
-Norway’s top ranking in renewable energy share is not incidental—it reflects decades of strategic investment in hydroelectric infrastructure, supported by favorable geography and a stable policy environment. The country’s energy profile, dominated by hydropower, illustrates how natural endowments can be effectively leveraged to transition away from fossil fuels.
+The findings shed light on the structural factors driving Norway’s renewable energy leadership. Its top ranking is the result of long-term investment in hydropower, supported by favorable geography and consistent national policy. Norway’s energy profile—dominated by hydropower—demonstrates how natural resources can be effectively leveraged for a low-emission energy transition.
 
-However, this reliance on a single dominant source introduces potential vulnerabilities. Climate variability, such as droughts or shifting precipitation patterns, could significantly impact hydroelectric generation. Furthermore, despite its leadership, Norway’s use of wind, solar, and bioenergy remains minimal, indicating untapped potential for diversification.
+Nevertheless, dependence on a single energy source introduces potential risks. Climate variability—such as droughts and shifting precipitation patterns—could significantly reduce hydroelectric output. Additionally, Norway’s limited deployment of wind, solar, and bioenergy reveals an untapped opportunity for further diversification of its renewable portfolio.
 
-The global comparison in hydropower generation reinforces Norway’s substantial absolute output relative to its size. This combination of high renewable share and high volume is rare among countries and highlights the effectiveness of long-term, resource-aligned energy planning.
+The international comparison further reinforces that Norway’s renewable dominance is not just proportional but also absolute. This rare combination of high renewable share and significant generation volume underscores the success of sustained, resource-aligned energy strategies.
 
 In conclusion, Norway's case exemplifies how geographic advantages, when matched with consistent national policy and infrastructure investment, can result in world-leading performance in renewable energy integration.
+
+A key limitation of this study is its focus on quantitative data, without capturing differences in policy or social context. Future research could explore how governance, incentives, and behavior shape renewable adoption. Studying other high-performing countries may also offer valuable policy insights.
 
 ### Recommendations
 
