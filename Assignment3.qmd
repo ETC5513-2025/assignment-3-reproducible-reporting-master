@@ -240,7 +240,7 @@ In conclusion, Norway's case exemplifies how geographic advantages, when matched
 
 ### Recommendations
 
-- *Diversify energy sources*: Invest in wind and solar to reduce overreliance on hydropower.
+- *Diversify energy sources*: Invest in wind and solar to reduce over reliance on hydropower.
 - *Modernize energy infrastructure*: Improve grid flexibility to integrate more variable renewables.
 - *Export expertise*: Share Norway’s policy, regulatory, and engineering frameworks with other nations.
 - *Support adaptive policy*: Prepare for climate risks by developing redundancy and storage solutions.
@@ -248,9 +248,13 @@ In conclusion, Norway's case exemplifies how geographic advantages, when matched
 
 ## References
 
-Our World in Data. (2024). Renewable energy data explorer. Retrieved from [https://ourworldindata.org/renewable-energy](https://ourworldindata.org/renewable-energy)
+---
+nocite: |
+  @renewable_2023, @hydropower
+---
 
-Our World in Data. (2024). Hydropower generation by country. Retrieved from [https://ourworldindata.org/grapher/hydropower-consumption](https://ourworldindata.org/grapher/hydropower-consumption)
+::: {#refs}
+:::
 
 
 ## Citations 
