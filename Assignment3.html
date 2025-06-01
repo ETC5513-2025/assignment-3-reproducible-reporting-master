@@ -54,7 +54,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#top-10-countries-by-renewable-energy-share-in-2023" id="toc-top-10-countries-by-renewable-energy-share-in-2023" class="nav-link" data-scroll-target="#top-10-countries-by-renewable-energy-share-in-2023">Top 10 Countries by Renewable Energy Share in 2023</a></li>
   <li><a href="#norway-global-leader-in-2023" id="toc-norway-global-leader-in-2023" class="nav-link" data-scroll-target="#norway-global-leader-in-2023">Norway: Global Leader in 2023</a></li>
-  <li><a href="#explaining-norways-top-position" id="toc-explaining-norways-top-position" class="nav-link" data-scroll-target="#explaining-norways-top-position">Explaining Norway’s Top Position</a></li>
+  <li><a href="#hydropower-output-by-country-2023" id="toc-hydropower-output-by-country-2023" class="nav-link" data-scroll-target="#hydropower-output-by-country-2023">Hydropower Output by Country (2023)</a></li>
   </ul></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   <li><a href="#discussion-and-conclusion" id="toc-discussion-and-conclusion" class="nav-link" data-scroll-target="#discussion-and-conclusion">Discussion and Conclusion</a>
@@ -108,18 +108,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="methodology" class="level1">
 <h1>Methodology</h1>
-<p>To identify the global leaders in renewable energy share, we used the publicly available dataset from Our World in Data, which includes annual records of renewable energy share by country from 1965 to 2023.</p>
-<p>We filtered the dataset to focus exclusively on 2023 and excluded aggregated regions (e.g., World, Europe, Asia), allowing us to rank individual countries by their share of primary energy from renewables.</p>
-<p><a href="#tbl-table-top10" class="quarto-xref">Table&nbsp;1</a> lists the top 10 countries with the highest renewable energy share in 2023, and <a href="#fig-top10-bar" class="quarto-xref">Figure&nbsp;1</a> presents a bar chart for direct visual comparison.</p>
-<p>To understand why Norway ranks highest globally, we analyzed its national renewable energy composition using a second dataset on electricity generation by source. We examined hydropower, wind, solar, and bioenergy to assess their respective contributions. This breakdown (<a href="#tbl-table-norway-2023" class="quarto-xref">Table&nbsp;2</a> and <a href="#fig-norway-sources" class="quarto-xref">Figure&nbsp;2</a>) shows Norway’s strong dependence on hydropower, which contributes over 90% of its renewable electricity output.</p>
-<p>To complement Norway’s national breakdown, we further compared its hydropower generation to other global producers. Although Norway relies heavily on hydropower as a share of its energy mix, <a href="#fig-global-hydro" class="quarto-xref">Figure&nbsp;3</a> reveals that its total generation is also globally significant—enabling a clearer comparison between scale and proportion in renewable leadership.</p>
+<p>Building on the global patterns identified above, we used 2023 data from Our World in Data to examine national-level energy composition. Aggregated regions were excluded to identify the top 10 countries by renewable energy share.</p>
+<p>We focused on Norway—the global leader—to explore the drivers behind its performance. This included analyzing Norway’s internal energy mix, comparing it with other major economies, and evaluating absolute hydropower output across countries.</p>
+<p>This combination of national and international comparisons clarifies whether Norway’s dominance stems from actual generation capacity or proportional advantage.</p>
 <section id="top-10-countries-by-renewable-energy-share-in-2023" class="level2">
 <h2 class="anchored" data-anchor-id="top-10-countries-by-renewable-energy-share-in-2023">Top 10 Countries by Renewable Energy Share in 2023</h2>
 <div class="cell">
 <div id="tbl-table-top10" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-table-top10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Top 10 Countries by Share of Renewable Energy in 2023
+Table&nbsp;1: Top 10 Countries by Renewable Energy Share (%) in 2023
 </figcaption>
 <div aria-describedby="tbl-table-top10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -208,17 +206,19 @@ Table&nbsp;1: Top 10 Countries by Share of Renewable Energy in 2023
 <img src="Assignment3_files/figure-html/fig-top10-bar-1.png" class="img-fluid figure-img" width="768">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-top10-bar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Top 10 Countries by Renewable Share in 2023
+Figure&nbsp;1: Bar chart of Top 10 Countries by Renewable Energy Share (%) (2023)
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><a href="#fig-top10-bar" class="quarto-xref">Figure&nbsp;1</a> illustrates the top 10 countries with the highest proportion of renewable energy in their primary energy mix in 2023. Norway ranks first, with over 70% of its primary energy sourced from renewables. Sweden and Brazil follow, each exceeding 50%, while countries like Denmark, New Zealand, and Austria also demonstrate strong renewable adoption above 40%.</p>
+<p><a href="#tbl-table-top10" class="quarto-xref">Table&nbsp;1</a> and <a href="#fig-top10-bar" class="quarto-xref">Figure&nbsp;1</a> show the top 10 countries with the highest renewable energy shares.<br>
+Norway leads with over 70%, far ahead of others.</p>
+<p>Its standout performance led us to investigate its domestic energy sources.</p>
 </section>
 <section id="norway-global-leader-in-2023" class="level2">
 <h2 class="anchored" data-anchor-id="norway-global-leader-in-2023">Norway: Global Leader in 2023</h2>
-<p>In 2023, Norway ranked first globally for its share of renewable energy. This highlights its long-standing commitment to sustainable energy policies and investment in hydropower.</p>
+<p>To understand Norway’s lead, we examined its 2023 electricity mix.</p>
 <div class="cell">
 <div id="tbl-table-norway-2023" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -266,18 +266,19 @@ Table&nbsp;2: Norway’s Renewable Electricity Generation by Source in 2023 (TWh
 <img src="Assignment3_files/figure-html/fig-norway-sources-1.png" class="img-fluid figure-img" width="576">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-norway-sources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Breakdown of Norway’s Renewable Energy Generation in 2023
+Figure&nbsp;2: Norway’s Renewable Electricity Breakdown by Source in 2023 (TWh)
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>As shown in <a href="#fig-norway-sources" class="quarto-xref">Figure&nbsp;2</a>, Norway’s renewable electricity in 2023 is dominated by hydropower, which accounts for approximately 136 TWh, making up more than 90% of its total renewable output. In comparison, wind energy contributed around 15 TWh, which is only about 10% of the total. Both solar energy and other renewables including bioenergy made negligible contributions, with values of 0.17 TWh and 0.26 TWh, respectively.</p>
-<p>This energy composition highlights that Norway’s leading renewable share is not due to technological diversity but rather its natural geographic advantages, particularly abundant hydrological resources.</p>
+<p>As shown in <a href="#fig-norway-sources" class="quarto-xref">Figure&nbsp;2</a>, hydropower generated 136 TWh—over 90% of its renewable output—while wind contributed 15 TWh. Solar and bioenergy were minimal.</p>
+<p>This indicates Norway’s dominance stems from heavy reliance on hydropower, rather than a diverse mix of renewable sources.</p>
 </section>
-<section id="explaining-norways-top-position" class="level2">
-<h2 class="anchored" data-anchor-id="explaining-norways-top-position">Explaining Norway’s Top Position</h2>
-<p>To understand this, we analyzed Norway’s national energy composition and compared it with other top-performing countries to explore why it leads globally in renewable energy share.</p>
+<section id="hydropower-output-by-country-2023" class="level2">
+<h2 class="anchored" data-anchor-id="hydropower-output-by-country-2023">Hydropower Output by Country (2023)</h2>
+<p>However, a high share or internal dominance alone may not indicate real strength.</p>
+<p>To validate whether Norway’s leadership reflects real capacity, we compared its absolute hydropower output with other major economies.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-global-hydro" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -292,7 +293,8 @@ Figure&nbsp;3: Global Hydropower Generation (TWh) in 2023 by Country
 </div>
 </div>
 </div>
-<p><a href="#fig-global-hydro" class="quarto-xref">Figure&nbsp;3</a> compares total hydropower generation in 2023 across selected countries. While China leads with over 1,200 TWh, Norway still ranks among the global top producers with approximately 270 TWh — despite its relatively small population and geographic size. This reinforces the idea that Norway’s dominance in renewable energy share is not just a percentage artifact, but supported by substantial hydropower infrastructure and generation capacity. Norway’s natural topography has enabled it to produce a significant amount of clean energy with low variability.</p>
+<p><a href="#fig-global-hydro" class="quarto-xref">Figure&nbsp;3</a> shows that in 2023, Norway generated 270 TWh—exceeding the U.S. (239 TWh) and India (149 TWh), despite its significantly smaller population and land area.</p>
+<p>This demonstrates that Norway’s leadership in renewable energy is not just based on proportional share, but is firmly supported by substantial infrastructure and high absolute output in clean energy production.</p>
 </section>
 </section>
 <section id="results" class="level1">

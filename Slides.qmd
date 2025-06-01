@@ -166,9 +166,6 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 
 :::
 
-:::
-
-:::
 
 
 
