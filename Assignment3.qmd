@@ -39,7 +39,7 @@ Building on the global patterns identified above, we used 2023 data from Our Wor
 
 We focused on Norway—the global leader—to explore the drivers behind its performance. This included analyzing Norway’s internal energy mix, comparing it with other major economies, and evaluating absolute hydropower output across countries.
 
-This combination of national and international comparisons clarifies whether Norway’s dominance stems from actual generation capacity or proportional advantage.
+This multi-layered analysis provides both a proportional and quantitative basis for assessing Norway's global leadership in renewable energy.
 
 ## Top 10 Countries by Renewable Energy Share in 2023
 
@@ -100,7 +100,7 @@ Its standout performance led us to investigate its domestic energy sources.
 
 ## Norway: Global Leader in 2023
 
-To understand Norway’s lead, we examined its 2023 electricity mix. 
+To understand Norway’s lead, we examined its 2023 electricity mix (@tbl-table-norway-2023). 
 
 ```{r tbl-table-norway-2023, echo=FALSE, message=FALSE, warning=FALSE}
 norway_prod <- read_csv("modern-renewable-prod.csv")
@@ -141,11 +141,11 @@ As shown in @fig-norway-sources, hydropower generated 136 TWh—over 90% of its 
 This indicates Norway’s dominance stems from heavy reliance on hydropower, rather than a diverse mix of renewable sources.
 
 
-## Hydropower Output by Country (2023)
+## Global Hydropower Generation by Country (2023)
 
-However, a high share or internal dominance alone may not indicate real strength.
+A high renewable share may not indicate real capacity.
 
-To validate whether Norway’s leadership reflects real capacity, we compared its absolute hydropower output with other major economies.
+To determine whether its leadership is substantive, we further compared Norway’s absolute hydropower output with that of other major economies.
 
 ```{r}
 #| label: fig-global-hydro
