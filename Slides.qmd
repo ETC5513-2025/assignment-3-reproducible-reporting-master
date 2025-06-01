@@ -1,53 +1,66 @@
 ---
-title: "2023 Global renewable energy leader"
+title: "Global Renewable Energy Leaders"
 author: "<br>Arisara Therdthianwong<br>Quanyu Qian<br>Dhruv Kaushal Gal"
 format:
   revealjs:
     theme: solarized
     incremental: true
+    slide-number: true
+    transition: slide
 ---
 
 # Problem Introduction
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="55%"}
 ![GHG Emissions by Sector](images/all-gas.png){#fig-ghg width="100%"}
 :::
 
 ::: {.column width="45%"}
-- Energy is the largest contributor to climate change  
-- **Electricity and heat:** 29.7%  
-- **Transportation:** 13.7%  
-- **Manufacturing and construction:** 12.7%  
-- **Buildings:** 6.6%  
+-   Energy is the largest contributor to global GHG emissions
+-   Major emission sources:
+    -   Electricity and heat: 29.7%
+    -   Transportation: 13.7%
+    -   Manufacturing and construction: 12.7%
+    -   Buildings: 6.6%
 :::
+:::::
 
-::::
+# Research Focus
 
-# Our finding
+:::::: columns
+::: {.column width="100%"}
+- Climate change → Renewable energy transition 🌍  
+- Key sources:  
+  - Hydropower 💧  
+  - Wind 🌬️  
+  - Solar ☀️
+-   Key focus:
+    -   Identify the **top 10 countries** with highest renewable energy share in 2023.
+    -   Investigate **Norway's leadership**
+:::
+::::::
 
--   Climate change and sustainability challenges
--   Shift in energy landscape
-    -   Hydropower
-    -   Wind
-    -   Solar
--   This report uses reliable data from [Our World in Data](https://ourworldindata.org/renewable-energy) to identify the **top 10 countries** by renewable energy share in 2023
+# Dataset Description
 
-# Methods
+-   Source: [Our World in Data](https://ourworldindata.org/renewable-energy)
 
-- Source: [Our World in Data](https://ourworldindata.org/renewable-energy)
-- Focused on year **2023**  
-- Removed regions (e.g., World, Asia)  
-- Ranked countries by renewable share (%)  
-- Based on **primary energy consumption**
-- Conducted cross-country comparison on renewable composition in primary energy use
+-   Focused on year **2023**
 
-## Top 10 Countries by Renewable Share
+-   Steps:
 
+    1.  Removed aggregated regions (e.g., World, Asia)
 
-- Ranked by % of primary energy from renewables  
-- Norway leads with 72.1%, followed by Sweden and Brazil
+    2.  Selected countries by % of renewable share
+
+    3.  Performed in-dept case study on Norway
+
+    4.  Compared Norway's output with larger economies for capacity check
+
+## Methodology: Top 10 Countries by Renewable Share (2023)
+
+-   Ranked by % of primary energy from renewable sources
+-   **Norway** leads with **72.1%**, Sweden 53.9% and Brazil 50.3%
 
 ```{r fig-top10-bar, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Top 10 countries by renewable energy share in 2023"}
 library(ggplot2)
@@ -72,25 +85,11 @@ ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary en
   theme(legend.position = "none")
 ```
 
+## Methodology: Norway's Renewable Energy Composition (2023)
 
-## Norway's Renewable Energy Composition (2023)
-
-::: {.columns}
-
-::: {.column width="35%"}
-- Hydropower: **91.2%**  
-- Wind: 6.2%  
-- Bioenergy: 2.1%  
-- Solar: 0.5%  
-- Shows Norway's natural advantage  
-- Basis of its global renewable leadership
-
-Together, this unique energy mix positions Norway as a global leader in clean electricity generation.
-:::
-
-::: {.column width="65%"}
-
-```{r fig-norway-pie, echo=FALSE, message=FALSE, warning=FALSE}
+::::: columns
+::: {.column width="60%"}
+```{r fig-norway-pie, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Norway's Renewable Energy Composition 2023"}
 df <- data.frame(
   source = c("Hydropower", "Wind", "Bioenergy", "Solar"),
   share = c(91.2, 6.2, 2.1, 0.5)
@@ -109,27 +108,21 @@ ggplot(df, aes(x = "", y = share, fill = source_label)) +
     legend.text = element_text(size = 14)  
   )
 ```
-
 :::
-
+::: {.column width="40%"}
+- Hydropower: **91.2%**  
+- Wind: 6.2%  
+- Bioenergy: 2.1%  
+- Solar: 0.5%  
+- Shows strong **hydropower dependency**
 :::
+:::::
 
-## Small Country, Big Power: Norway vs. Global Top
+## Methodology: Hydropower Output Comparison
 
-### Norway’s hydropower output rivals global giants despite its small size
-
-::: {.columns}
-
-::: {.column width="45%"}
--	Norway: 270 TWh 
--	United States: 239 TWh 
--	India: 149 TWh 
--	China: 1226 TWh 
-:::
-
+::::: columns
 ::: {.column width="55%"}
-
-```{r fig-global-hydro-pie, echo=FALSE, message=FALSE, warning=FALSE}
+```{r fig-global-hydro-pie, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Hydropower Generation by Country 2023"}
 library(readr)
 library(dplyr)
 library(ggplot2)
@@ -161,50 +154,27 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
     legend.key.size = unit(1, "cm")
   )
 ```
-
 :::
-
-:::
-
-
-
-
-## Results Summary
-
-:::: {.columns}
-
-::: {.column width="55%"}
-
-```{r fig-top10-bar-results, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Top 10 countries by renewable energy share in 2023"}
-# Reuse previously created 'top10_clean'
-
-ggplot(top10_clean, aes(x = reorder(Entity, `Renewables (% equivalent primary energy)`), 
-                        y = `Renewables (% equivalent primary energy)`, fill = Entity)) +
-  geom_col() +
-  coord_flip() +
-  labs(x = NULL, y = "Renewable Share (%)") +
-  theme_minimal() +
-  theme(legend.position = "none")
-```
-
-:::
-
 ::: {.column width="45%"}
-- **Norway** leads globally with **72.09%** renewable share  
-- Sweden (53.9%) and Brazil (50.3%) follow  
-- Reflects long-term national energy policies  
-- Natural hydroelectric capacity is a key driver  
+-   Comparison of hydropower output:
+
+    -   Norway: 270 TWh
+
+    -   United States: 239 TWh
+
+    -   India: 149 TWh
+
+    -   China: 1226 TWh
+
+-   Despite smaller size, Norway outproduced larger nations
 :::
+:::::
 
-::::
+# Long-term trends
 
-## Norway’s Renewable Share Over Time
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="55%"}
-
-```{r fig-norway-trend-slide, echo=FALSE, message=FALSE, warning=FALSE}
+```{r fig-norway-trend-slide, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Norway's Renewable Energy Share Overtime(2000-2023)"}
 norway_trend <- data %>%
   filter(Entity == "Norway", Year >= 2000) %>%
   select(Year, `Renewables (% equivalent primary energy)`)
@@ -216,33 +186,22 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
        x = "Year", y = "Renewables (% of Primary Energy)") +
   theme_minimal()
 ```
-
 :::
 
 ::: {.column width="45%"}
-- Norway has maintained a **>60%** renewable share since **2000**  
-- Consistent leadership due to:  
-  - Strong infrastructure  
-  - Supportive policy  
-  - Hydrological advantage  
+-   Maintained **\>60%** renewable share since **2000**
+-   Reflects:
+    -   Consistent investment in infrastructure
+    -   Long-term strategic planning
+    -   Strong renewable supportive policy
 :::
+:::::
 
-::::
+# Discussion
 
-## Discussion
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
-- Hydropower dominance offers reliability  
-- But it also introduces **climate risk**  
-  - Droughts or reduced rainfall can affect generation  
-- Other sources (wind, solar, bioenergy) are **underutilized**  
-:::
-
-::: {.column width="50%"}
-
-```{r fig-norway-sources-slide, echo=FALSE, warning=FALSE, message=FALSE}
+```{r fig-norway-sources-slide, echo=FALSE, warning=FALSE, message=FALSE,fig.cap="Norway's renewable energy mix(2023)"}
 library(readr)
 library(dplyr)
 library(tidyr)
@@ -275,30 +234,47 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
   theme(legend.position = "none")
 
 ```
+:::
+::: {.column width="50%"}
+-   Strengths:
 
+    -   High renewable share and volume
+
+    -   Magnificent hydropower infrastructure
+
+    -   Effective alignment of geography, policy, and investment
+
+-   Risks
+
+    -   Over-dependence on hydropower
+
+    -   Climate risk: reduced rainfall, droughts
+
+    -   Underutilized solor, wind, bioenergy
 :::
 
-::::
 
-## Policy Recommendations
+:::::
 
-:::: {.columns}
+# Conclusion
 
+::::: columns
 ::: {.column width="60%"}
+- Norway’s leadership reflects **real output and infrastructure**
+- Success driven by:
+    - Favorable geography
+    - Strong governance & long-term vision
+-   Policy Recommendations:
+    -   **Diversify**: Boost solar and wind investments
 
-- **Diversify** beyond hydropower  
-  - Boost solar and wind investments  
-- **Modernize the grid** to handle variability  
-- **Export expertise** in renewable policy  
-- **Plan for climate uncertainty** with redundancy and storage  
+    -   **Modernize the grid** to handle variability
+
+    -   **Plan for climate uncertainty** with storage and backup systems
+
+    -   **Share best practices** with other nations (policy & expertise)\
 :::
 
 ::: {.column width="40%"}
-![Policy Icon](images/policy.png){width="80%"}  
+![](images/policy.png){width="80%"}
 :::
-
-::::
-
-
-
-
+:::::
