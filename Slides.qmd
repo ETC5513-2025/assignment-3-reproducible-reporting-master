@@ -3,7 +3,7 @@ title: "Global Renewable Energy Leaders"
 author: "<br>Arisara Therdthianwong<br>Quanyu Qian<br>Dhruv Kaushal Gal"
 format:
   revealjs:
-    theme: solarized
+    theme: [simple, custom.scss]
     incremental: true
     slide-number: true
     transition: slide
@@ -17,19 +17,22 @@ format:
 :::
 
 ::: {.column width="45%"}
+<div style="font-size:90%">
 -   Energy is the largest contributor to global GHG emissions
 -   Major emission sources:
     -   Electricity and heat: 29.7%
     -   Transportation: 13.7%
     -   Manufacturing and construction: 12.7%
     -   Buildings: 6.6%
+</div>
 :::
 :::::
 
 # Research Focus
 
-:::::: columns
+::::: columns
 ::: {.column width="100%"}
+<div style="font-size:85%">
 - Climate change → Renewable energy transition 🌍  
 - Key sources:  
   - Hydropower 💧  
@@ -38,15 +41,42 @@ format:
 -   Key focus:
     -   Identify the **top 10 countries** with highest renewable energy share in 2023.
     -   Investigate **Norway's leadership**
+</div>
 :::
-::::::
+:::::
 
 # Dataset Description
 
+::::: columns
+::: {.column width="45%"}
+
+```{r}
+library(dplyr)
+library(knitr)
+library(tibble)
+
+df1 <- read.csv("renewable-share-energy.csv", fileEncoding = "UTF-8-BOM")
+df2 <- read.csv("modern-renewable-prod.csv", fileEncoding = "UTF-8-BOM")
+df3 <- read.csv("hydropower-consumption.csv", fileEncoding = "UTF-8-BOM")
+
+combined_df <- bind_rows(df1, df2, df3)
+glimpse(combined_df)
+summary(combined_df)
+
+
+```
+:::
+::: {.column width="55%"}
+
+
+<div style="font-size:65%">
 -   Source: [Our World in Data](https://ourworldindata.org/renewable-energy)
 
 -   Focused on year **2023**
-
+Grouped as:
+	-	🌍 Location
+	-	📊 Energy Types
+	-	⏳ Time Series
 -   Steps:
 
     1.  Removed aggregated regions (e.g., World, Asia)
@@ -56,6 +86,10 @@ format:
     3.  Performed in-dept case study on Norway
 
     4.  Compared Norway's output with larger economies for capacity check
+</div>
+:::
+::::: 
+
 
 ## Methodology: Top 10 Countries by Renewable Share (2023)
 
@@ -156,6 +190,8 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 ```
 :::
 ::: {.column width="45%"}
+
+<div style="font-size:85%">
 -   Comparison of hydropower output:
 
     -   Norway: 270 TWh
@@ -167,6 +203,7 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
     -   China: 1226 TWh
 
 -   Despite smaller size, Norway outproduced larger nations
+</div>
 :::
 :::::
 
@@ -189,11 +226,15 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 :::
 
 ::: {.column width="45%"}
--   Maintained **\>60%** renewable share since **2000**
+<div style="font-size:80%">
+
+-   Maintained **>60%** renewable share since **2000**
 -   Reflects:
-    -   Consistent investment in infrastructure
-    -   Long-term strategic planning
-    -   Strong renewable supportive policy
+    -   Consistent investment in infrastructure  
+    -   Long-term strategic planning  
+    -   Strong renewable supportive policy  
+
+</div>
 :::
 :::::
 
@@ -236,30 +277,30 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
 ```
 :::
 ::: {.column width="50%"}
--   Strengths:
 
-    -   High renewable share and volume
+<div style="font-size:80%">
 
-    -   Magnificent hydropower infrastructure
+**Strengths**  
+- High renewable share and volume  
+- Magnificent hydropower infrastructure  
+- Effective alignment of geography, policy, and investment  
 
-    -   Effective alignment of geography, policy, and investment
+**Risks**  
+- Over-dependence on hydropower  
+- Climate risk: reduced rainfall, droughts  
+- Underutilized solar, wind, bioenergy  
 
--   Risks
+</div>
 
-    -   Over-dependence on hydropower
-
-    -   Climate risk: reduced rainfall, droughts
-
-    -   Underutilized solor, wind, bioenergy
+:::
 :::
 
-
-:::::
 
 # Conclusion
 
 ::::: columns
 ::: {.column width="60%"}
+<div style="font-size:65%">
 - Norway’s leadership reflects **real output and infrastructure**
 - Success driven by:
     - Favorable geography
@@ -272,6 +313,7 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
     -   **Plan for climate uncertainty** with storage and backup systems
 
     -   **Share best practices** with other nations (policy & expertise)\
+</div>
 :::
 
 ::: {.column width="40%"}

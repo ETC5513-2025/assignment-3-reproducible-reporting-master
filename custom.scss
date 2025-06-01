@@ -1,0 +1,15 @@
+/*-- scss:defaults --*/
+$body-bg: #f8f9fa;
+$body-color: #1a1a1a;
+$link-color: #2c7be5;
+$body-bg: #e8f5e9;   
+
+$heading-color: #2e7d32;      
+$heading-font-weight: bold;   
+$heading-text-transform: uppercase;  
+
+/*-- scss:rules --*/
+.reveal .slide blockquote {
+  border-left: 3px solid #b0bec5;
+  padding-left: 0.5em;
+}
