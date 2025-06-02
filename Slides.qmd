@@ -17,7 +17,7 @@ format:
 :::
 
 ::: {.column width="45%"}
-<div style="font-size:90%">
+<div style="font-size:80%">
 -   Energy is the largest contributor to global GHG emissions
 -   Major emission sources:
     -   Electricity and heat: 29.7%
@@ -32,7 +32,7 @@ format:
 
 ::::: columns
 ::: {.column width="100%"}
-<div style="font-size:85%">
+<div style="font-size:80%">
 - Climate change → Renewable energy transition 🌍  
 - Key sources:  
   - Hydropower 💧  
@@ -48,7 +48,7 @@ format:
 # Dataset Description
 
 ::::: columns
-::: {.column width="45%"}
+::: {.column width="55%"}
 
 ```{r}
 library(dplyr)
@@ -60,23 +60,24 @@ df2 <- read.csv("modern-renewable-prod.csv", fileEncoding = "UTF-8-BOM")
 df3 <- read.csv("hydropower-consumption.csv", fileEncoding = "UTF-8-BOM")
 
 combined_df <- bind_rows(df1, df2, df3)
-glimpse(combined_df)
-summary(combined_df)
 
+cat("Number of unique countries/regions:", n_distinct(combined_df$Entity), "\n\n")
+
+glimpse(select(combined_df, 1:7))
 
 ```
 :::
-::: {.column width="55%"}
+::: {.column width="45%"}
 
 
-<div style="font-size:65%">
+<div style="font-size:60%">
 -   Source: [Our World in Data](https://ourworldindata.org/renewable-energy)
-
 -   Focused on year **2023**
+-   5,346 rows × 8 columns
 Grouped as:
-	-	🌍 Location
+	-	🌍 Entity
 	-	📊 Energy Types
-	-	⏳ Time Series
+	-	⏳  Year
 -   Steps:
 
     1.  Removed aggregated regions (e.g., World, Asia)
