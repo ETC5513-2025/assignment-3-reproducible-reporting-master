@@ -2,6 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+*.log
+*.tex
+*_files/figure-pdf/
+*.tar.gz
+*.Rcheck/
 
 # History files
 .Rhistory
@@ -57,4 +63,4 @@ rsconnect/
 
 Slides.html
 
-methodology_files/
+/methodology_files/
