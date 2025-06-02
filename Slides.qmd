@@ -208,7 +208,8 @@ ggplot(hydro_2023, aes(x = "", y = Hydro_TWh, fill = label)) +
 :::
 :::::
 
-# Long-term trends
+## Result: Long-term trends
+
 
 ::::: columns
 ::: {.column width="55%"}
@@ -239,11 +240,11 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 :::
 :::::
 
-# Discussion
-
+## Result: Norway’s 2023 Energy Mix
+### Strengths & Risks
 ::::: columns
 ::: {.column width="50%"}
-```{r fig-norway-sources-slide, echo=FALSE, warning=FALSE, message=FALSE,fig.cap="Norway's renewable energy mix(2023)"}
+```{r fig-norway-sources-slide, echo=FALSE, warning=FALSE, message=FALSE,fig.cap="Norway's Renewable Energy Mix(2023)"}
 library(readr)
 library(dplyr)
 library(tidyr)
@@ -279,7 +280,7 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
 :::
 ::: {.column width="50%"}
 
-<div style="font-size:80%">
+<div style="font-size:75%">
 
 **Strengths**  
 - High renewable share and volume  
@@ -306,7 +307,7 @@ ggplot(norway_2023, aes(x = reorder(Source, -TWh), y = TWh, fill = Source)) +
 - Success driven by:
     - Favorable geography
     - Strong governance & long-term vision
--   Policy Recommendations:
+-   **Policy Recommendations:**
     -   **Diversify**: Boost solar and wind investments
 
     -   **Modernize the grid** to handle variability
