@@ -250,7 +250,7 @@ A key limitation of this study is its focus on quantitative data, without captur
 
 ---
 nocite: |
-  @renewable_2023, @hydropower
+  @renewable_2023, @hydropower, @themes, @emissions_2021, @readr, @wickham_welcome_2019, @xie_library
 ---
 
 ::: {#refs}
