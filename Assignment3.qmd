@@ -184,13 +184,13 @@ Despite its small size, Norway produced 270 TWh, exceeding the U.S. (239 TWh) an
 \newpage
 # Results
 
-Based on the methodology outlined above, this section presents key findings from our data analysis. In 2023, Norway led globally in renewable energy adoption, with 72.09% of its primary energy from renewable sources, followed by Sweden (53.9%) and Brazil (50.3%) [@tbl-table-top10](#tbl-table-top10). These figures highlight strong national commitments to clean energy.
+Based on the methodology outlined above, this section presents key findings from our data analysis. In 2023, Norway led globally in renewable energy adoption, with 72.09% of its primary energy from renewable sources, followed by Sweden (53.9%) and Brazil (50.3%) as shown in [@tbl-table-top10](#tbl-table-top10). These figures highlight strong national commitments to clean energy.
 
 [@fig-top10-bar](#fig-top10-bar) visualizes the top 10 countries, with Norway’s share standing clearly above others. This exceptional performance reflects sustained investment and abundant hydropower resources.
 
 To explore the drivers of this leadership, [@tbl-table-norway-2023](#tbl-table-norway-2023) and [@fig-norway-sources](#fig-norway-sources) show that over 90% of Norway’s electricity in 2023 came from hydropower, with limited contributions from wind, solar, and bioenergy.
 
-[@fig-norway-trend](#fig-norway-trend) further illustrates that Norway has maintained a renewable share above 60% for two decades, signaling consistent national strategy and infrastructure planning.
+As shown in [@fig-norway-trend](#fig-norway-trend), Norway has maintained a renewable share above 60% for two decades, signaling consistent national strategy and infrastructure planning.
 
 Overall, these findings suggest that Norway’s leadership is not merely proportional but supported by robust capacity. The case exemplifies how favorable geography, long-term policy, and investment alignment can enable sustained renewable integration at scale.
 
@@ -226,7 +226,7 @@ ggplot(norway_trend, aes(x = Year, y = `Renewables (% equivalent primary energy)
 ```
 
 
-# Discussion and Conclusion
+# Conclusion
 
 The findings shed light on the structural factors driving Norway’s renewable energy leadership. Its top ranking is the result of long-term investment in hydropower, supported by favorable geography and consistent national policy. Norway’s energy profile—dominated by hydropower—demonstrates how natural resources can be effectively leveraged for a low-emission energy transition.
 
